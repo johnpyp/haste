@@ -2,7 +2,7 @@
 resolver = "2"
 members = [
   "crates/*",
-  "tools/*"
+  "tools/*",
 ]
 
 [workspace.package]
@@ -35,8 +35,8 @@ serde = "1.0.210"
 serde_json = "1.0.128"
 snap = "1.1.1"
 thiserror = "1.0.64"
+valveprotos = { git = "https://github.com/johnpyp/valveprotos-rs.git", rev = "f69e84aa0d0bbf1dcf65c3714a95e0169a111e61" }
 tokio = { version = "1.40.0", default-features = false }
-valveprotos = { git = "https://github.com/blukai/valveprotos-rs.git", rev = "63620c46236ed0f03a9e8b75954a4dafd0fe8e53" }
 
 # enable more optimizations in dev (/debug) builds for dependencies
 [profile.dev.package."*"]
@@ -85,4 +85,3 @@ required-features = ["preserve-metadata"]
 
 [[example]]
 name = "seek"
-
