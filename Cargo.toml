@@ -35,7 +35,7 @@ serde = "1.0.210"
 serde_json = "1.0.128"
 snap = "1.1.1"
 thiserror = "1.0.64"
-valveprotos = { git = "https://github.com/johnpyp/valveprotos-rs.git", rev = "b5ee365e78aa6b2bc29e4e957e3d644a471a12c8" }
+valveprotos = { git = "https://github.com/johnpyp/valveprotos-rs.git", rev = "a437d95ccbee97e709f6152929e081f625787f90" }
 tokio = { version = "1.40.0", default-features = false }
 
 # enable more optimizations in dev (/debug) builds for dependencies
