@@ -5,7 +5,7 @@ use anyhow::{Context as _, Result};
 use haste::demofile::DemoFile;
 use haste::parser::{Context, Parser, Visitor};
 use haste::valveprotos::dota2::{CdotaUserMsgChatMessage, EDotaUserMessages};
-use haste::valveprotos::prost::Message;
+use prost::Message;
 
 struct MyVisitor;
 

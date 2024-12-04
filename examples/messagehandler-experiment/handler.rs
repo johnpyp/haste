@@ -2,7 +2,7 @@ use std::marker::PhantomData;
 
 use anyhow::Result;
 use haste::parser::{Context, Visitor};
-use haste::valveprotos::prost;
+use prost::Message;
 
 pub trait MessageHandler<S, M: prost::Message + Default> {
     fn handle(&self, state: &mut S, ctx: &Context, message: &M) -> Result<()>;
@@ -18,7 +18,7 @@ impl<S, M: prost::Message + Default, F: Fn(&mut S, &Context, &M) -> Result<()>> 
 
 trait Handler<S> {
     fn handle(&mut self, state: &mut S, ctx: &Context, packet_type: u32, data: &[u8])
-    -> Result<()>;
+        -> Result<()>;
 }
 
 struct HandlerImpl<S, M: prost::Message + Default, H: MessageHandler<S, M>> {
